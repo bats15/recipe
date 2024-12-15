@@ -29,7 +29,7 @@ body{
 }
 .main{
     background-color: #34495e;
-    margin: 3em auto 1.5em auto;
+    margin: 3em auto 1em auto;
     width: 500px;
     height: fit-content;
     /* border: 2px solid black; */
