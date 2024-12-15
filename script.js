@@ -1,7 +1,7 @@
 const btn = document.querySelector('#go')
 const ing = document.querySelector(".recipetext")
 const pro = document.querySelector('.nextpg')
-const URL = new "https://www.themealdb.com/api/json/v1/1/search.php?s="
+const URL = "https://www.themealdb.com/api/json/v1/1/search.php?s="
 
 async function Fetcher() {
     let name = document.querySelector('#inp').value.trim();
