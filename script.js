@@ -13,7 +13,7 @@ async function Fetcher() {
     try {
         let res = await (await fetch(URL + name)).json();
         if (!res.meals) {
-            ing.innerHTML = 'Recipe not found. Please try another name.';
+            // ing.innerHTML = 'Recipe not found. Please try another name.';
             return;
         }
         item.innerHTML = res.meals[0].strMeal+ ': ' + '<br>'; // Clear previous results
