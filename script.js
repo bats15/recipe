@@ -16,10 +16,13 @@ async function Fetcher() {
             // ing.innerHTML = 'Recipe not found. Please try another name.';
             return;
         }
-        item.innerHTML = res.meals[0].strMeal+ ': ' + '<br>'; // Clear previous results
+        item.innerHTML = res.meals[0].strMeal + ': ' + '<br>'; // Clear previous results
+        ing.innerHTML = ''; // Clear previous ingredients
         for (let i = 1; i <= 20; i++) {
             let s = res.meals[0]['strIngredient' + i];
-            ing.innerHTML += s ? s + '<br>' : '';
+            if (s && s.trim() !== '') {
+                ing.innerHTML += s + '<br>';
+            }
         }
         pro.innerHTML = res.meals[0].strInstructions; // Display instructions
         console.log(res.meals[0].strMeal)
